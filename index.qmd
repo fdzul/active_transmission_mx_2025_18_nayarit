@@ -32,7 +32,18 @@ denhotspots::transmission_chains_map(geocoded_dataset = z,
 # [**Mapas de Calor**]{style="font-size:8pt"}
 
 ::: panel-tabset
-### [**Colima**]{style="color:#990000"}
-
+### [**Tepic**]{style="color:#990000"}
+```{r}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "18",
+                   locality = "Tepic",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
 :::
 
