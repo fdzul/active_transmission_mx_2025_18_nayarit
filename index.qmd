@@ -1,0 +1,38 @@
+---
+title: "Programa de Prevención & Control del Dengue | 2025"
+format: 
+  dashboard:
+      nav-buttons: [twitter, github, facebook]
+theme: custom.scss
+---
+
+```{r setup}
+library(sf)
+mapview::mapviewOptions(default = TRUE,
+                        basemaps.color.shuffle = FALSE)
+load("/Users/felipedzul/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+library(magrittr)
+```
+
+
+# [**Cadenas de Transmisión**]{style="font-size:8pt"}
+
+::: panel-tabset
+### [**Tepic**]{style="color:#990000"}
+```{r}
+denhotspots::transmission_chains_map(geocoded_dataset = z,
+                                     cve_edo = "18",
+                                     locality = "Tepic",
+                                     dengue_cases = "Probable")
+```
+
+
+:::
+
+# [**Mapas de Calor**]{style="font-size:8pt"}
+
+::: panel-tabset
+### [**Colima**]{style="color:#990000"}
+
+:::
+
